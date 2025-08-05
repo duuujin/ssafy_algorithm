@@ -18,8 +18,11 @@ def selection_sort(arr):
         min_idx = i
 
         for j in range(i + 1, n):
+            # 현재까지의 최소값보다 작은 값이 발견되면
+            # 최소값 인덱스를 갱신한다.
             if arr[j] < arr[min_idx]:
                 min_idx = j
+            # for문이 끝났다는건,, 끝까지 돌아서 최소값을 찾았따는 의미
         
         arr[i],arr[min_idx] = arr[min_idx], arr[i]
 ```
