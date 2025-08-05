@@ -1,1 +1,35 @@
 ## 카운팅 정렬
+- 항목들의 순서를 결정하기 위해 집합에 각 항목이 몇 개씩 있는지 세는 작업을 하여, 선형 시간에 정렬하는 효율적인 알고리즘
+- 제한 사항
+    - 정수나 정수로 표현할 수 있는 자료에 대해서만 적용 가능 : 각 항목의 발생회수를 기록하기 위해, 정수 항목으로 인덱스 되는 카운트들의 배열을 사용하기 때문이다.
+    - 카운트들을 위한 충분한 공간을 할당하려면 집합 내의 가장 큰 정수를 알아야 한다.
+- 시간 복잡도
+    - O(n+k) : n은 리스트 길이, k는 정수의 최댓값
+
+```python
+def counting_sort(arr, max_value):
+    n = len(arr)
+    count_arr = [0] * (max_value + 1)
+    result = [0] * n
+
+    for num in arr:
+        count_arr[num] += 1
+    
+    for i in range(1, k + 1):
+        count_arr[i] += count_arr[i - 1]
+    
+    for i in range(n - 1, -1, -1):
+        val = arr[i]
+        result[count_arr[val] - 1] = val
+        count_arr[val] -= 1
+    
+    return result
+```
+### 정수/정수표현이 가능한 경우에만 가능하고, N이크고,K가 작은경우에 유용
+- 최선,최악 시간복잡도: O(n+k)
+- 안정성 : o
+- 적응성 : x
+- 제자리 정렬 : x
+---
+# 0805 정렬 비교 
+![total](./total.png)

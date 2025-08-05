@@ -19,12 +19,15 @@
 ```python
 def insertion_sort(arr):
     n = len(arr)
-
-    for i in range(1,n):
+    # 첫 번쨰 요소는 이미 정렬 됐다고 치자!
+    # 두 번째 요소부터 미정렬이라고 치자!
+    # 미정렬에 있는 요소를 정렬된 요소의 적합한 장소에 넣자
+    for i in range(1,n): # 미정렬된 요소들을 순회하면서 정렬된 요소들의 적합한 장소 찾기
+        # 현재 idx 요소로부터 왼쪽부터 이동하면서 비교를 시작한다.
         for j in range(i, 0, -1):
-            if arr[j-1] > arr[j]:
-                arr[j-1], arr[j] = arr[j], arr[j-1]
-            else:
+            if arr[j-1] > arr[j]: # 왼쪽 요소가 현재 요소보다 큰 경우에는 위치를 바꾼다.
+                arr[j-1], arr[j] = arr[j], arr[j-1] # 서로를 위치를 교환하면서 이동한다.
+            else: # 왼쪽 요소가 현재 요소보다 작거나 같은 경우.. 즉, 여기는 내 위치다.
                 break
 ```
 ### 대부분 정렬된 경우이거나 작은 데이터 셋에 효율적
