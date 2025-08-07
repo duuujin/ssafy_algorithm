@@ -23,7 +23,7 @@ for tc in range(1, T+1):
                 for dist in range(1, arr[i][j] + 1): # arr[i][j] -> 1 일 경우에는 , 그대로 dist 1밖에 실행 안된다.
                     # 델타탐색으로 다음에 이동할 좌표
                     ni = i + dx*dist
-                    nj = y + dy*dist
+                    nj = j + dy*dist
 
                     # 범위를 벗어날 것. 
                     # 꽃가루의 누적은 범위 안에 있는 애들한테만 해당.
