@@ -19,7 +19,7 @@ for test_case in range(1, T+1):
     for idx in range(n // 2):
         # 시작점의 인덱스와 끝점의 인덱스가 서로 다르면 false
         # 달라버리면 안쪽은 더이상 검사를 할 필요가 없으니 break
-        if word[idx] != word[n - 1 - idx]:
+        if word[idx] != word[n - 1 - idx]: 
             result = 0
             break
         

@@ -14,6 +14,8 @@ for row in matrix:  # row => 행을 의미
         sorted_list.append(num)
 
 sorted_list.sort()
+# [1,2,3,4,5,6,7,8,9,~~] 
+
 
 # 빈 5*5 행렬을 만들어야 한다.
 # [0, 0,0,0,0] 이거를 하나 만들고, 이걸 N 번반복해서 2차원 리스트를 만들겠다.

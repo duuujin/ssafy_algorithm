@@ -1,5 +1,9 @@
 dxy = [[0,1],[0,-1],[1,0],[-1,0]]
 
+# dx = [0,1,0,-1]
+# dy = [1,0,-1,0]
+# dxy = [[0,1],[1,0],[0,-1],[-1,0]]
+
 T = int(input())
 for tc in range(1, T+1):
     N, M = list(map(int,input().split()))
@@ -18,7 +22,7 @@ for tc in range(1, T+1):
             # dxy = [[0,1],[0,-1],[1,0],[-1,0]]
             # 처음 for 돌 때 [0,1] => [dx, dy]
             # dx : 0 dy : 1 => 오른쪽
-            for dx,dy in dxy:
+            for dx,dy in dxy: # ->> 
                 # 각 방향으로 한 번 만 탐색 x -> 몇번탐색? -> 꽃가루 개수만큼(arr[i][j])
                 for dist in range(1, arr[i][j] + 1): # arr[i][j] -> 1 일 경우에는 , 그대로 dist 1밖에 실행 안된다.
                     # 델타탐색으로 다음에 이동할 좌표
