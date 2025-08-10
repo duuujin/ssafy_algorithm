@@ -25,6 +25,6 @@ for test_case in range(1, T+1):
     # 재귀함수
     # 범위가 점점 줄어야하고, 종료조건이 있어야함
     
-    reuslt = is_palindrome()
+    reuslt = is_palindrome(word,0, n-1)
         
     print(f'#{test_case}')
