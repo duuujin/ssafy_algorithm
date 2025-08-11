@@ -42,3 +42,9 @@
 ![IsEmpty](isempty.png)
 ## 스택 구현 - Peek
 ![Peek](peek.png)
+
+- zip
+*리스트 = 리스트 언패킹
+언패킹 후 zip으로 묶으면 같은 열끼리 묶는 것 (세로로)
+zip, map은 게을러서 리스트로 묶어줘야 함
+행과 열을 바꾸기 -> 전치 (zip)
