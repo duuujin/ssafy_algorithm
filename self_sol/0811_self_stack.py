@@ -8,6 +8,7 @@ def check_match(expression):
         ']' : '['
     }
 
+
     # 주어진 expression을 순회하면서, 괄호의 종류에 따라 push, pop를 진행하면서 비교
     for char in expression:
         # 여는 괄호가 나오면 바로 스택에 넣는다.
@@ -28,7 +29,7 @@ def check_match(expression):
             # 스택이 비어있지도 않고 , 짝도 맞는 경우
             stack.pop()
 
-    if not stack: # 스택이 안 비었다? 그러면 열린 괄호가 짝이 없다는 소리.
+    if stack: # 스택이 안 비었다? 그러면 열린 괄호가 짝이 없다는 소리.
         return False
 
     return True 
