@@ -7,6 +7,7 @@ for test_case in range(1,T+1):
     count = 0 # 이동한 거리 카운트 
     idx = []    # 시작점 인덱스 저장배열
     start_ar = 0    # 시작점 벨류값 저장소
+
     # ----시작지점 찾는 코드---------------------
     for i in range(n):
         for j in range(n):
@@ -39,6 +40,8 @@ for test_case in range(1,T+1):
             count = cnt     # 총 이동거리에 임시거리 할당
     print(f'#{test_case} {count}')
     # ----방문한 총 칸의 최대 개수 구하는 코드---끝------
+
+
 
     # ------------------------------------------------
     # for i in range(n):
