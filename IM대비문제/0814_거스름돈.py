@@ -9,5 +9,6 @@ for idx,value in enumerate(m_lst):
         gu = money // value
         money = money - (value*gu)
         t_lst[idx] = gu
+        
 print(f'#{test_case}')
 print(" ".join(map(str,t_lst)))
