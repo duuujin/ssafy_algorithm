@@ -5,7 +5,7 @@ for test_case in range(1,T+1):
     b = list(map(int,input().split()))
     max_sum = float('-inf') # 음수 중 최대 작은 수
     
-    if n < m :
+    if n < m : 
         for i in range(m - n + 1):
             total = 0
             for j in range(n):
