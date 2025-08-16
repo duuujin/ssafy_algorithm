@@ -17,5 +17,5 @@ for test_case in range(1,T+1):
             for j in range(m):
                 total += b[j] * a[i+j]
             max_sum = max(max_sum,total)
-print(f'#{test_case} {max_sum}')
+    print(f'#{test_case} {max_sum}')
 
