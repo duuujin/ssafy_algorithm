@@ -9,7 +9,6 @@ for test_case in range(1, T +1):
         if ti[-1] >= wi[-1]:
             cnt += wi.pop()
             ti.pop()
-        else :
+        else:
             wi.pop()
-
     print(f'#{test_case} {cnt}')
