@@ -6,10 +6,10 @@ for test_case in range(1, T +1):
     cnt = 0
 
     while ti and wi:
-        ti[-1] >= wi[-1]
-        cnt += wi.pop()
-        ti.pop()
-    else :
-        wi.pop()
+        if ti[-1] >= wi[-1]:
+            cnt += wi.pop()
+            ti.pop()
+        else :
+            wi.pop()
 
     print(f'#{test_case} {cnt}')
