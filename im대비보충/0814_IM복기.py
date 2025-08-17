@@ -12,4 +12,4 @@ for test_case in range(1,T+1):
                 num_lst.append(arr[j])
         max_len = max(len(num_lst),max_len)
     # print(num_lst)
-    print(max_len)
+    print(f'#{test_case} {max_len}')
