@@ -5,4 +5,3 @@ for test_case in range(1,11):
     pand_count = 0
 
     
-    
