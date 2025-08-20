@@ -4,4 +4,4 @@ for test_case in range(1,11):
     arr = [list(map(str,input().split())) for _ in range(8)]
     pand_count = 0
 
-    
+    a = 1
