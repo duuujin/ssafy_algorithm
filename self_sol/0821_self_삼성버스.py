@@ -9,4 +9,6 @@ for test_case in range(1,T+1):
     c3 = int(input())
     c4 = int(input())
     c5 = int(input())
+    result = [0]*p
+    
     
