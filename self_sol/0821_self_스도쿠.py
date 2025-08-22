@@ -32,3 +32,6 @@ for test_case in range(1,T+1):
                     break
 
     print(f'#{test_case} {result}')
+
+# ------------------------------------------------
+# set으로 풀어보기
