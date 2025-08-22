@@ -1,3 +1,4 @@
+from collections import defaultdict
 T = int(input())
 for test_case in range(1,T+1):
     # result = [0]*5001
@@ -40,4 +41,15 @@ for test_case in range(1,T+1):
     # print(f'#{test_case} {" ".join(map(str,aa))}')
     # 실패 
     # ---------------------------------------------------------------
+    n = int(input())  # 버스 노선의 개수
+    bus_list = [list(map(int, input().split())) for _ in range(n)]
+    P = int(input())  
+    p_list = [int(input()) for _ in range(P)]
+
+    result = defaultdict(int)
+    for i in range(n):
+        for stop in set(p_list):
+            if bus_list[i][0] <= stop <= bus_list[i][1]:
+                result[stop] += 1
+    
     
