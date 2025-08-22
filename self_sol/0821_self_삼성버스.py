@@ -19,5 +19,25 @@ for test_case in range(1,T+1):
     #     print(result[i], end=' ')
     # print()
     # ------------------------------------------------------------
-    n = int(input())
+    # result = [0] * 5001
+    # bus = []
+    # aa = []
+    # n = int(input())
+    # for i in range(n):
+    #     a1,b1 = map(int,input().split())
+    #     for j in range(a1,b1+1):
+    #         result[j] += 1
+    # p = int(input())
+    # for i in range(p):
+    #     a = int(input())
+    #     bus.append(a)
+    
+    # for i in range(len(bus)+1):
+    #     if result[i] in bus:
+    #         aa.append(result[i])
+    
+    
+    # print(f'#{test_case} {" ".join(map(str,aa))}')
+    # 실패 
+    # ---------------------------------------------------------------
     
