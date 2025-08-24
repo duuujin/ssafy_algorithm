@@ -6,3 +6,6 @@ for test_case in range(1,11):
     visited = [[False] * 100 for _ in range(100)]   # 이동 한 위치 체크 배열
     cnt = 0 # 최단거리 카운트
     
+    for i in range(len(arr)):
+        for j in range(len(arr)):
+            visited[i][j] = True
