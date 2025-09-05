@@ -102,8 +102,8 @@ for i in range(2):
             for l in range(3):
                 if selected[l] == 1:
                     subset.append(num[l])
-            print (subset)
-            # print (selected, subset) # 가독성 높인 버전
+            # print (subset)
+            print (selected, subset) # 가독성 높인 버전
 
 # 재귀 구현 버전
 print ("재귀 버전========")
