@@ -16,4 +16,3 @@ for test_case in range(1, T+1):
                     start += arr[ni][nj]
                     total_max = max(total_max,start)
     print(total_max)
-                
