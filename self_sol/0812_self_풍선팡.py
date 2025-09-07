@@ -10,6 +10,7 @@ for test_case in range(1,T+1):
             total_sum = arr[i][j]
 
             for dx,dy in dxy:
+                # 현재 터지는 풍선 위치만큼 상하좌우로 같이 터짐
                 for step in range(1, arr[i][j]+1):
                     ni = i + dx*step
                     nj = j + dy*step
