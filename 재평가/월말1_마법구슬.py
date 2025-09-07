@@ -1,10 +1,10 @@
-from itertools import combinations, permutations, product, combinations_with_replacement
 T = int(input())
-for test_case in range(1, T+1):
-    n , k1 , k2 = map(int,input().split())
+for test_case in range(1,T+1):
+    n,k1,k2 = map(int,input().split())
     nums = [i for i in range(1,n+1)]
-    k = 2 ** n
+    k = 2**n
     ans = 0
+
     for i in range(k):
         sum_num = 0
         for j in range(n):
@@ -16,5 +16,4 @@ for test_case in range(1, T+1):
         if k1 <= sum_num <= k2:
             ans += 1
     
-    print(f'#{test_case} {ans}')
-    
+    print(ans)
