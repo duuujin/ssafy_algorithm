@@ -139,7 +139,7 @@ subset_cnt = 2 ** n
 ans_list = []
 for i in range(subset_cnt):
     subset = []
-    for j in range(n):
+    for j in range(n): 
         if i & (1 << j):  # 여기를 이해하시면 되는데 2진수로 변환했을 때 
                           # 각 비트가 1이면 그자릿수를 subset 리스트에 포함시키는 거에요
             subset.append(num[j])
