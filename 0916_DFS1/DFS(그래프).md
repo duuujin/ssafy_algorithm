@@ -60,6 +60,14 @@
 
 # DFS(그래프) 알고리즘 코드 구현
 ```python
+def dfs(current, adj_matrix, visited):
+    visited[current] = True
+
+    for i in range(len(adj_matrix)):
+        if adj_matrix[current][i] and not visited[i]:
+            dfs(i, adj_matrix, visited)
+
+# 정점 수 = N
 N = 5
 adj_matrix = [
     [0, 1, 1, 0, 0],
@@ -77,10 +85,4 @@ for i in range(N):
 # current: 탐색 정점
 # adjMatrix: 인접 행렬
 # visited: 방문 체크 리스트:
-def dfs(current, adj_matrix, visited):
-    visited[current] = True
-
-    for i in range(len(adj_matrix)):
-        if adj_matrix[current][i] and not visited[i]:
-            dfs(i, adj_matrix, visited)
 ```
