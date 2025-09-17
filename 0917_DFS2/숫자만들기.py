@@ -12,9 +12,8 @@ def dfs(depth, value, plus, minus, mul, div):
     if mul > 0:
         dfs(depth + 1, value * numbers[depth], plus, minus, mul - 1, div)
     if div > 0:
-
         if value < 0:
-            dfs(depth + 1, -(-value // numbers[depth]), plus, minus, mul, div - 1)
+            dfs(depth + 1, int(-value / numbers[depth]), plus, minus, mul, div - 1)
         else:
             dfs(depth + 1, value // numbers[depth], plus, minus, mul, div - 1)
 
@@ -29,3 +28,5 @@ for t in range(1, T + 1):
     dfs(1, numbers[0], plus, minus, mul, div)
 
     print(f"#{t} {max_value - min_value}")
+
+    # -------------gpt
