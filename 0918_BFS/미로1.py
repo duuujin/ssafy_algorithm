@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('C:/Users/SSAFY/Desktop/ssafy_algorithm/ssafy_algorithm/0918_BFS/miro.txt','r')
+sys.stdin = open('C:/Users/enwls/Desktop/ssafy_algorithm/ssafy_algorithm/0918_BFS/miro.txt','r')
 from collections import deque
 T = 10
 for test_caes in range(1,T+1):
