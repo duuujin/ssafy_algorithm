@@ -1,0 +1,48 @@
+def make_set(n):
+    """부모와 랭크 리스트 초기화"""
+    parent = [i for i in range(n + 1)]
+    rank = [0] * (n + 1)
+    return parent, rank
+
+def find_set(x):
+    """경로 압축이 적용된 find_set"""
+    if parent[x] != x:
+        parent[x] = find_set(parent[x])
+    return parent[x]
+
+def union(x, y):
+    """랭크 기반으로 최적화된 union"""
+    root_x = find_set(x)
+    root_y = find_set(y)
+
+    if root_x != root_y:
+        if rank[root_x] > rank[root_y]:
+            parent[root_y] = root_x
+        elif rank[root_x] < rank[root_y]:
+            parent[root_x] = root_y
+        else:
+            parent[root_y] = root_x
+            rank[root_x] += 1
+
+
+parent, rank = make_set(6)
+
+edges = [(1, 2), (2, 3), (4, 5), (5, 6), (3, 4)]
+
+for i, (u, v) in enumerate(edges):
+    union(u, v)
+
+print(f"최종 parent: {parent}")
+print(f"최종 rank: {rank}")
+'''
+    최종 완성된 서로배타 집합의 구조는 아래처럼 생김
+    [0, 1, 1, 1, 1, 1, 4, 4]
+    - 0은 사용하지 않음
+                        1 
+                      / | \ 
+                     2  3  4
+                          / \
+                         5   6
+    - 1은 대표자, 2, 3은 1의 자식, 4는 1의 자식이지만 5, 6의 부모
+    - 5, 6은 4의 자식
+'''
