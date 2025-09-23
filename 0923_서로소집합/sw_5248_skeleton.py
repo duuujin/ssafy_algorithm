@@ -21,9 +21,6 @@ def union_set(x,y):
             p_list[py] = px
             rank[px] += 1
 
-
-
-
 T = int(input())
 for tc in range(1, T+1):
     # N = 전체 사람 번호
