@@ -20,7 +20,6 @@ for test_case in range(1,T+1):
         visited[u] = True
         total_cost += cost
         cnt += 1
-        print(min_heap)
         for v in range(n):
             if not visited[v]:
                 dist = (vertices[u][0] - vertices[v][0])**2 + (vertices[u][1] - vertices[v][1])**2
