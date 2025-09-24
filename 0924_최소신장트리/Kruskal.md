@@ -47,7 +47,7 @@ class DisjoinSet:
         for i in range(n+1):
             ds.make_set(i)
         
-        edges.sort(key=lambda x: x[2])
+        edges.sort(key=lambda x: x[2]) # 가중치 기준으로 정렬
         for edge in edges:
             s, e, w = edge
             if ds.find_set(s) != ds.find_set(e):

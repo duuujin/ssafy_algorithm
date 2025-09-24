@@ -29,7 +29,7 @@ def prim(vertices, edges):
         adj_list[end_v].append((start_v,w))
 
     visited = set()
-    init_vertec = vertices[0]
+    init_vertex = vertices[0]
     min_heap = [[w, init_vertex, e] for e,w in adj_list[init_vertex]]
     heapq.heapify(min_heap)
     visited.add(init_vertex)
@@ -60,5 +60,4 @@ mst = prim(vertices, edges) # [(1, 3, 10) , (3, 2, 20)]
     - 정점 중심의 알고리즘
 - 단점
     - 희소 그래프에서 비효율적
-    - 음의 가중치를 처리할 수 없음
 - 시간 복잡도 : O((V+E) log V)
