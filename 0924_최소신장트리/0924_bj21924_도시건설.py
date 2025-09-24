@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 def find(parent, x):
     if parent[x] != x:
         parent[x] = find(parent, parent[x])
@@ -11,10 +14,9 @@ def union(parent, a, b):
     parent[b_root] = a_root
     return True
 
-def kruskal(vertices, edges):
-    global total_cost, min_cost
+def kruskal(N, edges):
     edges.sort(key=lambda x: x[2])
-    parent = {v: v for v in vertices}
+    parent = {i: i for i in range(1, N+1)}
     mst_cost = 0
     mst_edges = []
     
@@ -23,16 +25,14 @@ def kruskal(vertices, edges):
             mst_cost += w
             mst_edges.append((u, v, w))
     
-    if len(mst_edges) != len(vertices) - 1:
+    if len(mst_edges) != N - 1:
         return -1
+    total_cost = sum(w for _, _, w in edges)
     return total_cost - mst_cost
 
-N,M = map(int,input().split())
+# 입력
+N, M = map(int, input().split())
 edges = [list(map(int, input().split())) for _ in range(M)]
-vertices = list({v for edge in edges for v in edge[:2]})
 
-total_cost = sum(w for _,_, w in edges)
-min_cost = 0
-result = kruskal(vertices, edges)
-
+result = kruskal(N, edges)
 print(result)
