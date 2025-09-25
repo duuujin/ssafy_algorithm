@@ -70,5 +70,4 @@ for test_case in range(1, T+1):
     start_v = 0
     res = dijkstra(n, edges, start_v)
 
-    print(res)
     print(f'#{test_case} {res[n]}')
