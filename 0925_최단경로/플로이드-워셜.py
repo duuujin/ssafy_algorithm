@@ -1,10 +1,16 @@
 def floyd_warshall(graph):
     V = len(graph)
 
+    # 모든 정점을 경유 정점으로 고려한다
     for k in range(V):
-        for i in range(V):
-            for j in range(V): 
+        for i in range(V):  # 시작 정점을 고정하고
+            # if i != k : continue
+            for j in range(V): # 도착 정점을 고려한다
+                # k를 경유해서 가냐 (graph[i][k] + graph[k][j])
+                # 직항으로 i에서 j로 가냐(graph[i][j])
+                # 직항으로 가는 경우가 더 먼 경우에는 경유하는 거리로 갱신한다
                 if graph[i][k] + graph[k][j] < graph[i][j]:
+                    # 작은 값으로 갱신한다.
                     graph[i][j] = graph[i][k] + graph[k][j]
                     
     for i in range(V):
