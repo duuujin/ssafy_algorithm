@@ -1,5 +1,5 @@
 import heapq, math
-
+ 
 def dijkstra(graph, start):
     # 모든 정점의 도달 최소 거리를 무한대로 초기화
     distances = {v: math.inf for v in graph}
