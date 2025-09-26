@@ -1,3 +1,4 @@
+import math
 def dfs(depth, value, plus, minus, mul, div):
     global max_value, min_value, N, numbers
     if depth == N:
@@ -24,8 +25,8 @@ for t in range(1, T + 1):
     N = int(input())
     plus, minus, mul, div = map(int, input().split())
     numbers = list(map(int, input().split()))
-    max_value = -1e9
-    min_value = 1e9
+    max_value = -math.inf
+    min_value = math.inf
     dfs(1, numbers[0], plus, minus, mul, div)
 
     print(f"#{t} {max_value - min_value}")
