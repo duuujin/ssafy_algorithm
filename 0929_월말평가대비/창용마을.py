@@ -6,12 +6,13 @@ def find(x):
 def union(x,y):
     px = find(x)
     py = find(y)
-    if px != py:
+
+    if px != py :
         p_list[py] = px
 
 T = int(input())
 for test_case in range(1,T+1):
-    n,m = map(int,input().split())
+    n , m = map(int,input().split())
     p_list = list(range(n+1))
     for _ in range(m):
         a,b = map(int,input().split())
