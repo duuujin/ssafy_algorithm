@@ -1,8 +1,9 @@
 def innord(n):
-    if n <= N:
-        innord(n*2)
+    if n <= N :
+        innord(2*n)
         ans.append(lst[n])
-        innord(n*2+1)
+        innord(2*n+1)
+
 
 for test_case in range(1,11):
     N = int(input())
