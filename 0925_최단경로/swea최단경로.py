@@ -16,6 +16,8 @@ def dijk(n, arr, start, start1):
             nx, ny = x+dx, y+dy
             if 0 <= nx < n and 0 <= ny < n:
                 nd = d + 1
+                if board[nx][ny] > board[x][y]:
+                    nd += board[nx][ny] - board[x][y]
                 if nd < distance[nx][ny] :
                     distance[nx][ny] = nd
                     heapq.heappush(min_heap, (nd, (nx,ny)))
@@ -30,4 +32,4 @@ for test_case in range(1,T+1):
     start_x = 0
     start_y = 0
     res = dijk(n, board, start_x, start_y)
-    print(res)
+    print(f'#{test_case} {res}')
