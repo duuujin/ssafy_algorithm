@@ -1,13 +1,13 @@
 dxy = [[0,1],[0,-1],[1,0],[-1,0]]
 
-def dfs(x, y):
+def dfs(x,y):
     visited[x][y] = True
     if miro[x][y] == 3:
         return True
     
-    for dx , dy in dxy:
-        nx, ny = x+dx, y+dy
-        if 0 <= nx < n and 0 <= ny < n and visited[nx][ny] == False :
+    for dx,dy in dxy:
+        nx, ny = x + dx, y + dy
+        if 0 <= nx < n and 0 <= ny < n and visited[nx][ny] == False:
             if miro[nx][ny] == 1: continue
             if dfs(nx,ny):
                 return True
