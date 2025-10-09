@@ -24,3 +24,6 @@
     - heapq.heapify(x) : 리스트 x를 heap으로 변환 ( O(N) )
     - heapq.heappush(heap, item) : item을 heap에 추가
     - heapq.heappop(heap) : heap에서 가장 작은 원소를 pop 하고 리턴
+
+# heap 최대힙 구현
+- 모든 값을 음수로 변환하면 최대 힙을 구할 수 있음
